@@ -1,3 +1,9 @@
+<h1 id="h">Server Status: </h1>
+<a id="a" href="" >Take me to the server</a>
 <script>
-  location.replace("tcp://0.tcp.ngrok.io:17614")
-</script>
+  var status = "Down";
+  document.getElementById("h").innerHTML += status;
+  if (status == "Down") {
+    document.getElementById("a").onclick = "return false";
+    document.getElementById("a").style.color = "gray";
+  }
